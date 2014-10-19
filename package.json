@@ -1,0 +1,14 @@
+{
+  "name": "responsive-play",
+  "version": "0.0.1",
+  "description": "working with lynda.com course on single-page responsive website",
+  "author": "pjs",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-compass": "^1.0.1",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-jade": "^0.13.0",
+    "grunt-autoprefixer": "^1.0.1"
+  }
+}
