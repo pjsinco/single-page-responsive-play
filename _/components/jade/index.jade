@@ -1,0 +1,177 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title Landon Hotel
+  link(rel='stylesheet' href='_/css/styles.css')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+
+body
+  header#intro
+    article.fullheight
+      div.hgroup
+        h1 Landon Hotel
+        h2 West London
+        p: a(href='#welcome'): img(src='images/misc/arrow.png' alt='down arro')
+
+  nav#nav
+    div.navbar
+      div.brand
+        a(href='#welcome') Landon
+          span Hotel
+      ul
+        li: a.icon.info(href='#hotelinfo'): span info
+        li: a.icon.rooms(href='#rooms'): span rooms
+        li: a.icon.dining(href='#dining'): span dining
+        li: a.icon.events(href='#events'): span events
+        li: a.icon.attractions(href='#attractions'): span attractions
+
+  main#wrapper     
+    div.scene#welcome
+      article.content
+        div.gallery
+          img(src="images/hotel/intro_room.jpg" alt="Intro Gallery Room Sample Pictures")
+          img(src="images/hotel/intro_pool.jpg" alt="Intro Gallery Pool Sample Pictures")
+          img(src="images/hotel/intro_dining.jpg" alt="Intro Gallery Dining Sample Pictures")
+          img(src="images/hotel/intro_attractions.jpg" alt="Intro Gallery Attractions Sample Pictures")
+          img.hidesm(src="images/hotel/intro_wedding.jpg" alt="Intro Gallery Dining Sample Pictures")
+        h1 Welcome to the Landon&nbsp;Hotel 
+        p.
+          The original Landon perseveres after 50 years in the heart of West London. The West End neighborhood has something for everyone&mdash;from theater to dining to historic sights. And the not-to-miss Rooftop Cafe is a great place for travelers and locals to engage over drinks, food, and good&nbsp;conversation.
+    div.scene#hotelinfo
+      article.heading
+        h1 Essential Info
+      article#usefulinfo
+        section.checklist#arrivalinfo
+          h2 Arrival Information
+          ul
+          li #[strong Check-in&#58;] 3:00 PM
+          li #[strong Check-out&#58;] 11:00 AM
+          li #[strong Parking:] Self-parking in the underground garage is ￡15 per day and valet-parking is ￡50 per day.
+          li #[strong Airport Shuttle:] Our complimentary airport shuttles leave every hour on the hour, and make trips to Heathrow and Gatwick airports.
+          li #[strong Trains:] The nearest Underground station is at Leicester Square.
+          li #[strong Pet Policy:] Pets of all sizes and types are allowed in designated pet rooms, and the specified common areas. Service animals are allowed everywhere.
+        section.checklist#accessibility
+          h2 Services and Amenities
+          p Our services and amenities are designed to make your travel easy, your stay comfortable, and your experience one-of-a-kind.
+          ul
+            li: Grab bars on tub walls
+            li: Shower chairs
+            li: Hand held shower sprayers
+            li: Higher toilets &amp; toilet modifiers
+            li: Lower sink faucet handles
+            li: Wheelchair clearance under sinks &amp; vanity
+            li: Lower racks in closet
+            li: TDD machines
+            li: Telephone light signalers  &amp; smoke alarms
+            li: Telephone amplification handsets
+            li: Closed captioned television converters
+            li: Vibrating alarm clocks
+            li: Telephones with volume control
+      article#greenprogram
+        h2 Landon Green Program
+        p #[strong The Landon Hotel - London] was recently renovated, and we considered the impact on the earth the entire way. From green building materials, to solar power, to energy-friendly lighting and appliances throughout the hotel - we’re saving energy in every socket, outlet, and switch. We’ve also initiated a recycling and composting program that reduces the load to local landfills, while providing valuable raw material for use in new products, or in the case of compost, for use in local gardens and landscapes.</p>
+    div.scene#rooms
+      header
+        h1 Guest Rooms
+        p. 
+          Our guest rooms feature sumptuous classic furnishings that evoke visions of London’s rich and long-standing tradition of royalty. While our rooms are decked out in classic design, they each have a modern flair, and contain all the modern comforts expected in today’s luxury hotels. We’ve named our rooms for the notable public squares and circuses around which the West End is laid&nbsp;out.
+      article.room.fullheight#piccadilly
+        section.content
+          h1 Piccadilly
+          p.
+            Designed to be our economy room, for those who will be spending more time seeing the sights, and less time hitting the hay. The Piccadilly room has a smaller footprint, but maintains the accommodations of some of our more deluxe rooms.
+      article.room.fullheight#cambridge
+        section.content
+          h1 Cambridge
+          p.
+            This room features a king bed, with a Comfort-Plus mattress, covered in 400-thread Egyptian cotton sheets. The Cambridge room is decorated in tasteful and warm muted tones, that are soothing on the eyes and senses.
+      article.room.fullheight#westminster
+        section.content
+          h1 Westminster
+          p.
+            This room is available with a king or two double beds, and is furnished with our Premiere London collection – the softest and most luxurious bed and bath linens.
+      article.room.fullheight#oxford
+        section.content
+          h1 Oxford
+          p.
+            Our Oxford suites are some of the prettiest and most romantic rooms around and are perfect for honeymoons. All of these feature canopy beds, lots of windows, and spare no modern comfort or convenience, including a TLX media system.
+      article.room.fullheight#victoria
+        section.content
+          h1 Victoria
+          p.
+            Traveling with the family? Our spacious Victoria suites, with breathtaking views of the city, are the perfect choice. These corner rooms are furnished with a king or two double beds, and have a sofa with a comfortable pullout bed.
+      article.room.fullheight#manchester
+        section.content
+          h1 Manchester
+          p.
+            The Manchester Executive Suite, is popular with business travelers the world over. These two-room suites feature a king-size bed, living room with leather recliner, full-sized executive desk, and leather desk chair.</p>
+
+    div.scene#dining
+      article#areadining
+        h1 Dining in the Area
+        p.
+          The West End is a foodie’s paradise, and the Landon Hotel is in the center of it all. With options for traditional English, Italian, Indian, American, Chinese, and French cuisines, all within two blocks of the hotel, and a variety of tasty culinary delights from many other countries, within a half-mile radius, the only trouble you’ll have is choosing!
+      article#inhotel
+        section#rooftopcafe
+          h2 Rooftop Caf&acute;
+          img(src="images/hotel/dining_rooftop.jpg" alt="Dining")
+          p.
+            Landon Rooftop Caf&eacute; is the destination for five star dining. Our master chefs are trained to meet special dietary needs, and we offer a range of vegetarian/vegan, kosher, gluten, and dairy free selections to accommodate our guests. Whether you&rsquo;re in the mood for our award winning roast beef, fresh select salads, appetizing lunch entrees, or delectable desserts, we have you covered.
+
+        section#smoothiebar
+          h2 Smoothie Bar
+          img(src="images/hotel/dining_smoothiebar.jpg" alt="Dining")
+          p.
+            The Rooftop Smoothie Bar gives you panoramic views of the city, where you can have one of our specialty smoothies while you wait for your table. Our top mixologists are constantly bringing new and unique offerings to our smoothie menu. We have a wide range of locally grown, fresh fruit and vegetable choices to make you custom blended drinks.  We also have seasonal selections that you won’t find anywhere else.
+
+        section#coffeebar
+          h2 Breakfast &amp; Coffee Bar
+          img(src="images/hotel/dining_lattes.jpg" alt="Dining")
+          p.
+            Our traditional breakfast and coffee bar, located adjacent to our lounge, are the perfect way to start your morning. We offer a wide selection of seasonal fresh fruit, a variety of cereals, croissants, crusty sourdough bread, cook-to-order eggs and omelettes, fresh juice, coffee, and teas. Breakfast is served from 7:00 am to 10:00 am daily. Our coffee bar is open until 6:30 pm daily.
+      article#roomservice
+        h1 Room Service
+        p.
+          If you’d rather stay in your room and enjoy a quiet evening in, or a relaxing breakfast in bed, room service options are available for all of our dining choices.
+  
+    div.scene#events
+      article.event.fullheight#businessmeetings
+        div.content
+          h2 Business Meetings
+          p.
+            Our hotel boasts wireless Internet in every common room, and guest room, including the dining area and lobby. And, we have a state-of-the-art meeting room with video projectors, high definition video screens, and advanced sound technology.
+
+      article.event.fullheight#weddings
+        div.content
+          h2 Weddings &amp; Social Events
+          p.
+            When you entrust us to handle your wedding, or other event, you’re putting your faith in our professional reputation – and that’s not a responsibility we take lightly.
+  
+    div.scene.fullheight#attractions
+      article.content
+        h1 Local Attractions
+        p.
+          Whether you’re a theater enthusiast, enjoy epic shopping, or love to stroll and people watch, London’s West End has an endless opportunity to partake. The heart of London’s "Theatreland" offering the best in drama, comedy, and musical productions.
+
+  footer.scene
+    article.content
+      div#socialmedia
+        ul.group
+          li: a(href="https://twitter.com"): img.icon(src="images/socialmedia/twitter.png" alt="icon for twitter")
+          li: a(href="http://www.facebook.com"): img.icon(src="images/socialmedia/facebook.png" alt="icon for facebook")
+          li: a(href="http://www.youtube.com"): img.icon(src="images/socialmedia/youtube.png" alt="icon for youtube")
+
+
+
+
+
+
+    
+
+
+
+        
+
+
+  script(src='_/js/script.js')
+  script(src='http://localhost:35729/livereload.js')
