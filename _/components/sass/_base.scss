@@ -1,0 +1,28 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: $font-family;
+  font-weight: $thin;
+  font-size: rem-calc(16px);
+  line-height: 1.5em;
+  background: $background-color;
+  color: $type-default;
+}
+
+#{headings()} {
+  font: $head-font;
+  color: $head-color;
+  font-weight: $bold;
+}
+
+strong {
+  font-weight: $bold;
+}
+
+p {
+  font-weight: $thin;
+  /*padding-bottom:*/
+
+}

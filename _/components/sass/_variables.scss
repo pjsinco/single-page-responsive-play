@@ -1,0 +1,35 @@
+@import url(http://fonts.googleapis.com/css?family=Exo:200,400,600,800);
+
+@include border-box-sizing;
+
+// color palette
+$blue       : #063642;
+$green      : #45B29D;
+$yellow     : #EFC94C;
+$orange     : #E27A3F;
+$red        : #DF4848;
+$pink       : #CD0069;
+$purple     : #6C71C4;
+$dark       : #000000;
+$light      : #FFFFFF;
+
+$background-color : $light;
+$type-default     : lighten($dark, 20);
+$nav-background   : $blue;
+$nav-foreground   : $light;
+$nav-hover        : $yellow;
+$nav-brand-bg     : $red;
+$header-sub-bg    : $dark;
+
+// font variables
+$font-family : 'Exo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$thin        : 200;
+$normal      : 400;
+$bold        : 600;
+$heavy       : 800;
+
+$head-font         : $thin 1.5em/1.5em $font-family;
+$main-font         : $thin 1em/1.5em $font-family;
+$head-color        : lighten($blue, 20);
+$rem-base          : 16px;
+$base-font-size    : $rem-base;
