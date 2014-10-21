@@ -22,11 +22,11 @@ body
           #[a(href='#welcome') Landon #[span Hotel]]
         ul
           //- we'll use the spans for hiding
-          li: a.icon.info(href='#hotelinfo'): span info 
-          li: a.icon.rooms(href='#rooms'): span rooms
-          li: a.icon.dining(href='#dining'): span dining
-          li: a.icon.events(href='#events'): span events
-          li: a.icon.attractions(href='#attractions'): span attractions
+          li #[a.icon.info(href='#hotelinfo')          #[span info]]
+          li #[a.icon.rooms(href='#rooms')             #[span rooms]]
+          li #[a.icon.dining(href='#dining')           #[span dining]]
+          li #[a.icon.events(href='#events')           #[span events]]
+          li #[a.icon.attractions(href='#attractions') #[span attractions]]
 
   main#wrapper     
     div.scene#welcome

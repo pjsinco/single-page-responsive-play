@@ -33,3 +33,13 @@ $main-font         : $thin  $font-family;
 $head-color        : lighten($blue, 20);
 $rem-base          : 16px;
 $base-font-size    : $rem-base;
+
+// susy
+$susy: (
+  columns: 12,
+  container: 60em,
+  gutters: 1/4,
+  gutter-position: inside
+);
+
+// breakpoint
