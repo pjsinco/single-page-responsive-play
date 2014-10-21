@@ -1,0 +1,82 @@
+#nav {
+
+  @include clearfix;
+  @include background-image(
+    linear-gradient(
+      top, 
+      lighten($nav-background, 10),
+      $nav-background
+    )
+  );
+  width: 100%;
+  
+  .navbar {
+
+    .brand {
+      float: left;
+      font-weight: $bold;
+      font-family: $head-font;
+      text-align: center;
+      text-transform: uppercase;
+      background: $nav-brand-bg;
+
+      a {
+        color: $nav-foreground;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        padding: remcalc(10px);
+        font-size: remcalc(24px);
+
+      } // a
+    } // .brand
+
+    ul {
+
+      li {
+        float: left;
+    
+        a {
+          color: $nav-foreground;
+          font: $main-font;
+          font-size: remcalc(16px);
+          text-decoration: none;
+          display: inline-block;
+          padding: remcalc(10px 10px 10px 45px);
+
+          // icon styles
+          @include background-size(remcalc(35px));
+          background-repeat: no-repeat;
+          background-position: 2px;
+          text-decoration: none;
+        
+          &.info {
+            @include background-image(image-url('icons/info.png'));
+          }
+          &.rooms {
+            @include background-image(image-url('icons/rooms.png'));
+          }
+          &.dining {
+            @include background-image(image-url('icons/dining.png'));
+          }
+          &.events {
+            @include background-image(image-url('icons/events.png'));
+          }
+          &.attractions {
+            @include background-image(image-url('icons/attractions.png'));
+          }
+          &.info {
+            @include background-image(image-url('icons/info.png'));
+          }
+
+          &:hover {
+            background: $nav-hover;
+            color: $blue;
+
+          }
+
+        } // a
+      } // li
+    } // ul
+  } // .navbar
+} // #nav

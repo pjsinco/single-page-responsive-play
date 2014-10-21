@@ -13,17 +13,20 @@ body
         h2 West London
         p: a(href='#welcome'): img(src='images/misc/arrow.png' alt='down arro')
 
-  nav#nav
-    div.navbar
-      div.brand
-        a(href='#welcome') Landon
-          span Hotel
-      ul
-        li: a.icon.info(href='#hotelinfo'): span info
-        li: a.icon.rooms(href='#rooms'): span rooms
-        li: a.icon.dining(href='#dining'): span dining
-        li: a.icon.events(href='#events'): span events
-        li: a.icon.attractions(href='#attractions'): span attractions
+    //- NOTE we need 2 nav containers
+    //- nav#nav    -- the color bar that will stretch width of screen 
+    //- div.navbar -- so we can center our nav in a container
+    nav#nav 
+      div.navbar 
+        div.brand
+          #[a(href='#welcome') Landon #[span Hotel]]
+        ul
+          //- we'll use the spans for hiding
+          li: a.icon.info(href='#hotelinfo'): span info 
+          li: a.icon.rooms(href='#rooms'): span rooms
+          li: a.icon.dining(href='#dining'): span dining
+          li: a.icon.events(href='#events'): span events
+          li: a.icon.attractions(href='#attractions'): span attractions
 
   main#wrapper     
     div.scene#welcome

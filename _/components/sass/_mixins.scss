@@ -15,7 +15,7 @@
 
 // https://github.com/zurb/foundation/blob/master/scss/
 //  foundation/_functions.scss
-@function rem-calc($values, $base-value: $rem-base) {
+@function remcalc($values, $base-value: $rem-base) {
   $max: length($values);
 
   @if $max == 1 { 
@@ -34,10 +34,12 @@
     );
   }
   @return $remValues;
-} // rem-calc
+} // remcalc
 
 // create full-screen background image
 @mixin back-image($image) {
   background: image-url($image) no-repeat center center fixed;
   @include background-size(cover);
 }
+
+

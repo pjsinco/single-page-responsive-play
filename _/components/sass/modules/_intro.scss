@@ -1,0 +1,43 @@
+header {
+  .fullheight {
+    @include back-image('hotel/splash_hotelphoto.jpg');
+    
+    .hgroup {
+      padding: remcalc(100px 0);
+    } // .hgroup
+
+    h1 {
+      color: $light;
+      font-size: remcalc(80px);
+      font-weight: $heavy;
+      line-height: remcalc(64px);
+      @include text-shadow(lighten($dark, 20) -2px -2px remcalc(20px));
+      text-align: center;
+    } // h1
+
+    h2 {
+      display: block;
+      color: $light;
+      background: rgba($header-sub-bg, .25);
+      width: 60%;
+      max-width: remcalc(200px);
+      margin: 0 auto;
+      text-align: center;
+      font-size: remcalc(20.8px);
+
+      border: 1px solid $light;
+      margin-top: remcalc(15px);
+      margin-bottom: remcalc(10px);
+    } // h2
+    
+    p {
+      text-align: center;
+
+      img {
+        padding-top: remcalc(50px);
+        max-width: remcalc(50px);
+
+      } // img
+    } // p
+  } // .fullheight
+} // header

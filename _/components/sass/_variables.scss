@@ -28,8 +28,8 @@ $normal      : 400;
 $bold        : 600;
 $heavy       : 800;
 
-$head-font         : $thin 1.5em/1.5em $font-family;
-$main-font         : $thin 1em/1.5em $font-family;
+$head-font         : $thin  $font-family;
+$main-font         : $thin  $font-family;
 $head-color        : lighten($blue, 20);
 $rem-base          : 16px;
 $base-font-size    : $rem-base;
