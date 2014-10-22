@@ -42,4 +42,9 @@ $susy: (
   gutter-position: inside
 );
 
-// breakpoint
+// breakpoint media query settings
+$small  : 30.0625em; // 481px
+$medium : 48em.0625; // 769px
+$medium-large: 54.0625em; // 865px
+$large  : 60.0625em; // 961px
+$xlarge : 75.0625em; // 1201px

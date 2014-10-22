@@ -29,8 +29,15 @@
         text-align: center;
         display: inline-block;
         padding: remcalc(10px);
-        font-size: remcalc(24px);
-
+        font-size: 1.1em;
+        span {
+          visibility: hidden;
+        }
+        @include breakpoint($small) {
+          span {
+            visibility: visible;
+          } // span
+        } // $smal
       } // a
     } // .brand
 
@@ -41,19 +48,26 @@
         float: left;
     
         a {
-          color: $nav-foreground;
-          font: $main-font;
-          font-size: remcalc(16px);
-          text-decoration: none;
-          display: inline-block;
-          padding: remcalc(10px 10px 10px 45px);
-
           // icon styles
           @include background-size(remcalc(35px));
           background-repeat: no-repeat;
           background-position: 2px;
           text-decoration: none;
-        
+          display: inline-block;
+          padding: .625em 1.125em; 
+          color: $nav-foreground;
+          font: $main-font;
+          font-size: remcalc(16px);
+          text-decoration: none;
+          &::after {
+            content: '\000a0';
+            display: inline-block;
+          }
+          span {
+            /*display: inline-block;*/
+            visibility: hidden;
+          }
+
           &.info {
             @include background-image(image-url('icons/info.png'));
           }
@@ -76,7 +90,20 @@
           &:hover {
             background: $nav-hover;
             color: $blue;
+          }
 
+          @include breakpoint($small) {
+            visibility: visible;
+            padding: remcalc(10px 10px 10px 45px);
+          } // breakpoint
+
+          @include breakpoint($medium-large) {
+            span {
+              visibility: visible;
+            }
+            a.icon {
+              background-image: none;
+            }
           }
 
         } // a

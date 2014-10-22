@@ -1,0 +1,65 @@
+#welcome {
+
+  @include background-image(
+    linear-gradient(top, $yellow, $orange)
+  );
+
+  article {
+    padding-top: 0;
+    padding-bottom: 2em;
+    text-align: center;
+    @include container(70%);
+    /*@include breakpoint($medium) {*/
+      /*@include container(80%);*/
+    /*}*/
+  } // article
+
+  h1 {
+    font-weight: $normal;
+    line-height: 1.5em;
+    color: lighten($orange, 30);
+    font-size: 2em;
+  } // h1
+
+  .gallery {
+    @include clearfix;
+
+    img {
+      visibility: hidden;
+      height: 0;
+    } // img
+
+    @include breakpoint($small) {
+      img {
+        @include border-radius(20%);
+        @include gallery(1 of 4);
+        height: 100%;
+        visibility: visible;
+        &.hidesm { 
+          visibility: hidden;
+        } 
+      } // img
+      h1 {
+        padding: .625em 0;
+      } // h1
+    } // min-width $small
+
+    @include breakpoint($medium) {
+      img {
+        @include border-radius(20%);
+        @include gallery(1 of 5);
+        &.hidesm {
+          visibility: visible;
+          height: 100%;
+        } // .hidesm
+      } // img
+      h1 {
+        padding: .625em 0;
+      } // h1
+    } // min-width medium
+
+
+  }
+
+
+} // welcome

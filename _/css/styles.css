@@ -69,7 +69,7 @@ html {
 body {
   font-family: "Exo", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200;
-  font-size: rem-calc(16px);
+  font-size: 1em;
   line-height: 1.5em;
   background: #FFFFFF;
   color: #333333; }
@@ -85,6 +85,10 @@ strong {
   font-weight: 600; }
 
 /* line 24, ../components/sass/_base.scss */
+h1 {
+  font-size: 2.75em; }
+
+/* line 28, ../components/sass/_base.scss */
 p {
   font-weight: 200;
   /*padding-bottom:*/ }
@@ -98,7 +102,7 @@ body {
 /* line 7, ../components/sass/_layout.scss */
 .scene {
   position: relative;
-  padding: rem-calc(20px 0); }
+  padding: 1.25em 0; }
 
 /* line 2, ../components/sass/modules/_intro.scss */
 header .fullheight {
@@ -182,8 +186,15 @@ header .fullheight {
         text-align: center;
         display: inline-block;
         padding: 0.625rem;
-        font-size: 1.5rem; }
-    /* line 37, ../components/sass/modules/_nav.scss */
+        font-size: 1.1em; }
+        /* line 33, ../components/sass/modules/_nav.scss */
+        #nav .navbar .brand a span {
+          visibility: hidden; }
+        @media (min-width: 30.0625em) {
+          /* line 37, ../components/sass/modules/_nav.scss */
+          #nav .navbar .brand a span {
+            visibility: visible; } }
+    /* line 44, ../components/sass/modules/_nav.scss */
     #nav .navbar ul {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
@@ -192,43 +203,188 @@ header .fullheight {
       float: left;
       padding-left: 0.83333%;
       padding-right: 0.83333%; }
-      /* line 40, ../components/sass/modules/_nav.scss */
+      /* line 47, ../components/sass/modules/_nav.scss */
       #nav .navbar ul li {
         float: left; }
-        /* line 43, ../components/sass/modules/_nav.scss */
+        /* line 50, ../components/sass/modules/_nav.scss */
         #nav .navbar ul li a {
-          color: #FFFFFF;
-          font: 200 "Exo", "Helvetica Neue", Helvetica, Arial, sans-serif;
-          font-size: 1rem;
-          text-decoration: none;
-          display: inline-block;
-          padding: 0.625rem 0.625rem 0.625rem 2.8125rem;
           -moz-background-size: 2.1875rem;
           -o-background-size: 2.1875rem;
           -webkit-background-size: 2.1875rem;
           background-size: 2.1875rem;
           background-repeat: no-repeat;
           background-position: 2px;
+          text-decoration: none;
+          display: inline-block;
+          padding: .625em 1.125em;
+          color: #FFFFFF;
+          font: 200 "Exo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-size: 1rem;
           text-decoration: none; }
-          /* line 57, ../components/sass/modules/_nav.scss */
+          /* line 62, ../components/sass/modules/_nav.scss */
+          #nav .navbar ul li a::after {
+            content: '\000a0';
+            display: inline-block; }
+          /* line 66, ../components/sass/modules/_nav.scss */
+          #nav .navbar ul li a span {
+            /*display: inline-block;*/
+            visibility: hidden; }
+          /* line 71, ../components/sass/modules/_nav.scss */
           #nav .navbar ul li a.info {
             background-image: url('../../images/icons/info.png?1413763094'); }
-          /* line 60, ../components/sass/modules/_nav.scss */
+          /* line 74, ../components/sass/modules/_nav.scss */
           #nav .navbar ul li a.rooms {
             background-image: url('../../images/icons/rooms.png?1413763094'); }
-          /* line 63, ../components/sass/modules/_nav.scss */
+          /* line 77, ../components/sass/modules/_nav.scss */
           #nav .navbar ul li a.dining {
             background-image: url('../../images/icons/dining.png?1413763094'); }
-          /* line 66, ../components/sass/modules/_nav.scss */
+          /* line 80, ../components/sass/modules/_nav.scss */
           #nav .navbar ul li a.events {
             background-image: url('../../images/icons/events.png?1413763094'); }
-          /* line 69, ../components/sass/modules/_nav.scss */
+          /* line 83, ../components/sass/modules/_nav.scss */
           #nav .navbar ul li a.attractions {
             background-image: url('../../images/icons/attractions.png?1413763094'); }
-          /* line 72, ../components/sass/modules/_nav.scss */
+          /* line 86, ../components/sass/modules/_nav.scss */
           #nav .navbar ul li a.info {
             background-image: url('../../images/icons/info.png?1413763094'); }
-          /* line 76, ../components/sass/modules/_nav.scss */
+          /* line 90, ../components/sass/modules/_nav.scss */
           #nav .navbar ul li a:hover {
             background: #EFC94C;
             color: #063642; }
+          @media (min-width: 30.0625em) {
+            /* line 50, ../components/sass/modules/_nav.scss */
+            #nav .navbar ul li a {
+              visibility: visible;
+              padding: 0.625rem 0.625rem 0.625rem 2.8125rem; } }
+          @media (min-width: 54.0625em) {
+            /* line 101, ../components/sass/modules/_nav.scss */
+            #nav .navbar ul li a span {
+              visibility: visible; }
+            /* line 104, ../components/sass/modules/_nav.scss */
+            #nav .navbar ul li a a.icon {
+              background-image: none; } }
+
+/* line 1, ../components/sass/modules/_welcome.scss */
+#welcome {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmYzk0YyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2UyN2EzZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efc94c), color-stop(100%, #e27a3f));
+  background-image: -moz-linear-gradient(top, #efc94c, #e27a3f);
+  background-image: -webkit-linear-gradient(top, #efc94c, #e27a3f);
+  background-image: linear-gradient(to bottom, #efc94c, #e27a3f); }
+  /* line 7, ../components/sass/modules/_welcome.scss */
+  #welcome article {
+    padding-top: 0;
+    padding-bottom: 2em;
+    text-align: center;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    /*@include breakpoint($medium) {*/
+    /*@include container(80%);*/
+    /*}*/ }
+    /* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+    #welcome article:after {
+      content: " ";
+      display: block;
+      clear: both; }
+  /* line 17, ../components/sass/modules/_welcome.scss */
+  #welcome h1 {
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #f6d6c4;
+    font-size: 2em; }
+  /* line 24, ../components/sass/modules/_welcome.scss */
+  #welcome .gallery {
+    overflow: hidden;
+    *zoom: 1; }
+    /* line 27, ../components/sass/modules/_welcome.scss */
+    #welcome .gallery img {
+      visibility: hidden;
+      height: 0; }
+    @media (min-width: 30.0625em) {
+      /* line 33, ../components/sass/modules/_welcome.scss */
+      #welcome .gallery img {
+        -moz-border-radius: 20%;
+        -webkit-border-radius: 20%;
+        border-radius: 20%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 25%;
+        float: left;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        height: 100%;
+        visibility: visible; }
+        /* line 66, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_gallery.scss */
+        #welcome .gallery img:nth-child(4n + 1) {
+          margin-left: 0;
+          margin-right: -100%;
+          clear: both; }
+        /* line 66, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_gallery.scss */
+        #welcome .gallery img:nth-child(4n + 2) {
+          margin-left: 25%;
+          margin-right: -100%;
+          clear: none; }
+        /* line 66, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_gallery.scss */
+        #welcome .gallery img:nth-child(4n + 3) {
+          margin-left: 50%;
+          margin-right: -100%;
+          clear: none; }
+        /* line 66, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_gallery.scss */
+        #welcome .gallery img:nth-child(4n + 4) {
+          margin-left: 75%;
+          margin-right: -100%;
+          clear: none; }
+        /* line 38, ../components/sass/modules/_welcome.scss */
+        #welcome .gallery img.hidesm {
+          visibility: hidden; }
+      /* line 42, ../components/sass/modules/_welcome.scss */
+      #welcome .gallery h1 {
+        padding: .625em 0; } }
+    @media (min-width: 0.0625) and (max-width: 48em) {
+      /* line 48, ../components/sass/modules/_welcome.scss */
+      #welcome .gallery img {
+        -moz-border-radius: 20%;
+        -webkit-border-radius: 20%;
+        border-radius: 20%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 20%;
+        float: left;
+        padding-left: 2%;
+        padding-right: 2%; }
+        /* line 66, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_gallery.scss */
+        #welcome .gallery img:nth-child(5n + 1) {
+          margin-left: 0;
+          margin-right: -100%;
+          clear: both; }
+        /* line 66, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_gallery.scss */
+        #welcome .gallery img:nth-child(5n + 2) {
+          margin-left: 20%;
+          margin-right: -100%;
+          clear: none; }
+        /* line 66, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_gallery.scss */
+        #welcome .gallery img:nth-child(5n + 3) {
+          margin-left: 40%;
+          margin-right: -100%;
+          clear: none; }
+        /* line 66, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_gallery.scss */
+        #welcome .gallery img:nth-child(5n + 4) {
+          margin-left: 60%;
+          margin-right: -100%;
+          clear: none; }
+        /* line 66, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_gallery.scss */
+        #welcome .gallery img:nth-child(5n + 5) {
+          margin-left: 80%;
+          margin-right: -100%;
+          clear: none; }
+        /* line 51, ../components/sass/modules/_welcome.scss */
+        #welcome .gallery img.hidesm {
+          visibility: visible;
+          height: 100%; }
+      /* line 56, ../components/sass/modules/_welcome.scss */
+      #welcome .gallery h1 {
+        padding: .625em 0; } }
