@@ -9,3 +9,21 @@ body {
   padding: 1.25em 0;
 
 }
+
+article:not(.fullheight) {
+  @include container(95%);
+
+}
+
+@media #{$medium-only} {
+  article {
+    @include container;
+  }
+
+} // medium-only
+
+@media #{$large-up} {
+
+  padding: 10% 0;
+  
+} // large-up
