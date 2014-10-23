@@ -1,0 +1,17 @@
+#rooms {
+
+  header {
+    margin-bottom: 1.5em;
+    @include container(90%);
+    @media #{$medium-up} {
+      @include container;
+      @include pad(1, 1);
+
+
+    }
+
+
+  }
+
+
+} // #rooms
