@@ -25,38 +25,34 @@
     @include clearfix;
 
     img {
-      visibility: hidden;
-      height: 0;
+      display: none;
     } // img
 
-    @include breakpoint($small) {
+    @media #{$medium-only} {
       img {
         @include border-radius(20%);
         @include gallery(1 of 4);
-        height: 100%;
-        visibility: visible;
+        display: inline;
         &.hidesm { 
-          visibility: hidden;
+          display: none;
         } 
       } // img
       h1 {
         padding: .625em 0;
       } // h1
-    } // min-width $small
+    } // $medium-only
+   
 
-    @include breakpoint($medium) {
+    @media #{$large-up} {
       img {
         @include border-radius(20%);
         @include gallery(1 of 5);
-        &.hidesm {
-          visibility: visible;
-          height: 100%;
-        } // .hidesm
+        display: inline;
       } // img
       h1 {
         padding: .625em 0;
       } // h1
-    } // min-width medium
+    } // $large-up
 
 
   }

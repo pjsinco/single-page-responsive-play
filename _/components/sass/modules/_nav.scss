@@ -28,14 +28,15 @@
         text-decoration: none;
         text-align: center;
         display: inline-block;
-        padding: remcalc(10px);
+        padding-top: .625em;
+        padding-bottom: .625em;
         font-size: 1.1em;
         span {
-          visibility: hidden;
+          display: none;
         }
-        @include breakpoint($small) {
+        @media #{$medium-up} {
           span {
-            visibility: visible;
+            display: inline;
           } // span
         } // $smal
       } // a
@@ -54,7 +55,8 @@
           background-position: 2px;
           text-decoration: none;
           display: inline-block;
-          padding: .625em 1.125em; 
+          /*padding: .625em 1.125em; */
+          padding: .625em 0;
           color: $nav-foreground;
           font: $main-font;
           font-size: remcalc(16px);
@@ -92,10 +94,11 @@
             color: $blue;
           }
 
-          @include breakpoint($small) {
-            visibility: visible;
-            padding: remcalc(10px 10px 10px 45px);
-          } // breakpoint
+          @media #{$medium-up} {
+            span {
+              padding: remcalc(10px 10px 10px 45px);
+            } // breakpoint
+          }
 
           @include breakpoint($medium-large) {
             span {
