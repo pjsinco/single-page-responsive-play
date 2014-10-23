@@ -105,6 +105,60 @@ body {
   position: relative;
   padding: 1.25em 0; }
 
+/* line 1, ../components/sass/modules/_hotelinfo.scss */
+#hotelinfo {
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzZjNzFjNCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzQ1YjI5ZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6c71c4), color-stop(100%, #45b29d));
+  background-image: -moz-linear-gradient(top, #6c71c4, #45b29d);
+  background-image: -webkit-linear-gradient(top, #6c71c4, #45b29d);
+  background-image: linear-gradient(to bottom, #6c71c4, #45b29d);
+  padding: 10%;
+  color: #FFFFFF;
+  font-size: .9em; }
+  /* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+  #hotelinfo:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  /* line 13, ../components/sass/modules/_hotelinfo.scss */
+  #hotelinfo li strong {
+    color: #EFC94C; }
+  /* line 18, ../components/sass/modules/_hotelinfo.scss */
+  #hotelinfo #arrivalinfo li {
+    border-bottom: 2px solid #d9daf0;
+    margin-top: .5em;
+    margin-bottom: .5em; }
+  /* line 25, ../components/sass/modules/_hotelinfo.scss */
+  #hotelinfo h1 {
+    color: #FFFFFF; }
+  /* line 29, ../components/sass/modules/_hotelinfo.scss */
+  #hotelinfo h2 {
+    color: #d9daf0; }
+  @media only screen and (min-width: 30.063em) and (max-width: 48em) {
+    /* line 35, ../components/sass/modules/_hotelinfo.scss */
+    #hotelinfo .checklist#services, #hotelinfo .checklist#accessibility {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 50%;
+      float: left;
+      padding-left: 0.83333%;
+      padding-right: 0.83333%; } }
+  @media only screen and (min-width: 48.063em) {
+    /* line 33, ../components/sass/modules/_hotelinfo.scss */
+    #hotelinfo .checklist {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 25%;
+      float: left;
+      padding-left: 0.83333%;
+      padding-right: 0.83333%; } }
+
 /* line 2, ../components/sass/modules/_intro.scss */
 header .fullheight {
   background: url('../../images/hotel/splash_hotelphoto.jpg?1413763094') no-repeat center center fixed;

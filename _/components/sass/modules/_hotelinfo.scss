@@ -1,5 +1,48 @@
 #hotelinfo {
+  @include container;
+    
+  @include background-image(
+    linear-gradient(top, $purple, $green)
+  );
+
+  padding: 10%;
+
+  color: $light;
+  font-size: .9em;
+
+  li strong {
+    color: $yellow;
+  }
+
+  #arrivalinfo {
+    li {
+      border-bottom: 2px solid lighten($purple, 30);
+      margin-top: .5em;
+      margin-bottom: .5em;
+    }
+  }// #arrivalinfo
+
+  h1 {
+    color: $light;
+  }
   
+  h2 {
+    color: lighten($purple, 30);
+  }
+
+  .checklist {
+    @media #{$medium-only} {
+      &#services,
+      &#accessibility {
+        @include span(6);
+      }
+    }
+    @media #{$large-up} {
+      @include span(3);
+    }
+
+  }
+    
   
 
 
