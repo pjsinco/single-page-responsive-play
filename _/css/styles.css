@@ -107,7 +107,12 @@ body {
 
 /* line 13, ../components/sass/_layout.scss */
 article {
-  max-width: 95%;
+  /*@include container();*/ }
+
+/*@media only screen and (min-width: 30.063em) {*/
+/* line 19, ../components/sass/_layout.scss */
+article {
+  max-width: 60em;
   margin-left: auto;
   margin-right: auto; }
   /* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
@@ -115,20 +120,53 @@ article {
     content: " ";
     display: block;
     clear: both; }
-
-@media only screen and (min-width: 30.063em) and (max-width: 48em) {
-  /* line 19, ../components/sass/_layout.scss */
-  article {
-    max-width: 60em;
-    margin-left: auto;
-    margin-right: auto; }
-    /* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
-    article:after {
+  /* line 65, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+  head {
+    display: block;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 999;
+    color: #333;
+    background: rgba(255, 255, 255, 0.25); }
+  /* line 66, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+  head:before {
+    content: "|||";
+    display: block;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold; }
+  /* line 67, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+  head:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: red; }
+  /* line 71, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+  head:hover ~ article, head:hover ~ body article {
+    position: relative; }
+    /* line 74, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+    head:hover ~ article:before, head:hover ~ body article:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
       content: " ";
-      display: block;
-      clear: both; } }
+      z-index: 998;
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2NjZmZiIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYjNiM2ZmIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+      background-size: 100%;
+      background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(102, 102, 255, 0.25)), color-stop(100%, rgba(179, 179, 255, 0.25)));
+      background-image: -moz-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+      background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+      background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+      background-size: 8.33333%;
+      background-origin: content-box;
+      background-clip: content-box;
+      background-position: left top; }
+
+/*} // medium-only*/
 @media only screen and (min-width: 48.063em) {
-  padding: 10% 0; }
+  /*padding: 10% 0;*/ }
 /* line 1, ../components/sass/modules/_hotelinfo.scss */
 #hotelinfo {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNhM2Y5MCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzQ1YjI5ZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
@@ -137,7 +175,7 @@ article {
   background-image: -moz-linear-gradient(top, #3a3f90, #45b29d);
   background-image: -webkit-linear-gradient(top, #3a3f90, #45b29d);
   background-image: linear-gradient(to bottom, #3a3f90, #45b29d);
-  padding-top: 3%;
+  padding: 2em;
   color: #FFFFFF; }
   /* line 11, ../components/sass/modules/_hotelinfo.scss */
   #hotelinfo h1, #hotelinfo h2, #hotelinfo h3, #hotelinfo h4, #hotelinfo h5, #hotelinfo h6 {
@@ -146,7 +184,7 @@ article {
   #hotelinfo h1 {
     font-size: 3em;
     font-weight: 200;
-    margin-bottom: .5em; }
+    line-height: 1.2em; }
   /* line 21, ../components/sass/modules/_hotelinfo.scss */
   #hotelinfo h2 {
     font-size: 1.3em;
@@ -231,54 +269,44 @@ article {
     #hotelinfo #greenprogram h2 {
       color: #FFFFFF; }
 
-/* line 1, ../components/sass/modules/_intro.scss */
-header {
-  max-width: 60em;
-  margin-left: auto;
-  margin-right: auto; }
-  /* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
-  header:after {
-    content: " ";
+/* line 2, ../components/sass/modules/_intro.scss */
+header .fullheight {
+  background: url('../../images/hotel/splash_hotelphoto.jpg?1413763094') no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover; }
+  /* line 5, ../components/sass/modules/_intro.scss */
+  header .fullheight .hgroup {
+    padding: 6.25rem 0; }
+  /* line 9, ../components/sass/modules/_intro.scss */
+  header .fullheight h1 {
+    color: #FFFFFF;
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 4rem;
+    text-shadow: #333333 -2px -2px 1.25rem;
+    text-align: center; }
+  /* line 18, ../components/sass/modules/_intro.scss */
+  header .fullheight h2 {
     display: block;
-    clear: both; }
-  /* line 4, ../components/sass/modules/_intro.scss */
-  header .fullheight {
-    background: url('../../images/hotel/splash_hotelphoto.jpg?1413763094') no-repeat center center fixed;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover; }
-    /* line 7, ../components/sass/modules/_intro.scss */
-    header .fullheight .hgroup {
-      padding: 6.25rem 0; }
-    /* line 11, ../components/sass/modules/_intro.scss */
-    header .fullheight h1 {
-      color: #FFFFFF;
-      font-size: 5rem;
-      font-weight: 800;
-      line-height: 4rem;
-      text-shadow: #333333 -2px -2px 1.25rem;
-      text-align: center; }
-    /* line 20, ../components/sass/modules/_intro.scss */
-    header .fullheight h2 {
-      display: block;
-      color: #FFFFFF;
-      background: rgba(0, 0, 0, 0.25);
-      width: 60%;
-      max-width: 12.5rem;
-      margin: 0 auto;
-      text-align: center;
-      font-size: 1.3rem;
-      border: 1px solid #FFFFFF;
-      margin-top: 0.9375rem;
-      margin-bottom: 0.625rem; }
-    /* line 35, ../components/sass/modules/_intro.scss */
-    header .fullheight p {
-      text-align: center; }
-      /* line 38, ../components/sass/modules/_intro.scss */
-      header .fullheight p img {
-        padding-top: 3.125rem;
-        max-width: 3.125rem; }
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.25);
+    width: 60%;
+    max-width: 12.5rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.3rem;
+    border: 1px solid #FFFFFF;
+    margin-top: 0.9375rem;
+    margin-bottom: 0.625rem; }
+  /* line 33, ../components/sass/modules/_intro.scss */
+  header .fullheight p {
+    text-align: center; }
+    /* line 36, ../components/sass/modules/_intro.scss */
+    header .fullheight p img {
+      padding-top: 3.125rem;
+      max-width: 3.125rem; }
 
 /* line 1, ../components/sass/modules/_nav.scss */
 #nav {
@@ -301,6 +329,28 @@ header {
       content: " ";
       display: block;
       clear: both; }
+    /* line 71, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+    head:hover ~ #nav .navbar, head:hover ~ body #nav .navbar {
+      position: relative; }
+      /* line 74, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+      head:hover ~ #nav .navbar:before, head:hover ~ body #nav .navbar:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        content: " ";
+        z-index: 998;
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2NjZmZiIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYjNiM2ZmIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+        background-size: 100%;
+        background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(102, 102, 255, 0.25)), color-stop(100%, rgba(179, 179, 255, 0.25)));
+        background-image: -moz-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+        background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+        background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+        background-size: 8.33333%;
+        background-origin: content-box;
+        background-clip: content-box;
+        background-position: left top; }
     /* line 16, ../components/sass/modules/_nav.scss */
     #nav .navbar .brand {
       -moz-box-sizing: border-box;
@@ -403,20 +453,69 @@ header {
               background-image: none; } }
 
 /* line 3, ../components/sass/modules/_rooms.scss */
+#rooms h1 {
+  font-size: 1.5em; }
+/* line 7, ../components/sass/modules/_rooms.scss */
 #rooms header {
   margin-bottom: 1.5em;
   max-width: 90%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-left: 9.16667%;
+  padding-right: 9.16667%; }
   /* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
   #rooms header:after {
     content: " ";
     display: block;
     clear: both; }
+  /* line 71, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+  head:hover ~ #rooms header, head:hover ~ body #rooms header {
+    position: relative; }
+    /* line 74, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+    head:hover ~ #rooms header:before, head:hover ~ body #rooms header:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      content: " ";
+      z-index: 998;
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2NjZmZiIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYjNiM2ZmIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+      background-size: 100%;
+      background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(102, 102, 255, 0.25)), color-stop(100%, rgba(179, 179, 255, 0.25)));
+      background-image: -moz-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+      background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+      background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+      background-size: 8.33333%;
+      background-origin: content-box;
+      background-clip: content-box;
+      background-position: left top; }
+  /* line 71, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+  head:hover ~ #rooms header, head:hover ~ body #rooms header {
+    position: relative; }
+    /* line 74, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+    head:hover ~ #rooms header:before, head:hover ~ body #rooms header:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      content: " ";
+      z-index: 998;
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2NjZmZiIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYjNiM2ZmIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+      background-size: 100%;
+      background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(102, 102, 255, 0.25)), color-stop(100%, rgba(179, 179, 255, 0.25)));
+      background-image: -moz-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+      background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+      background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+      background-size: 8.33333%;
+      background-origin: content-box;
+      background-clip: content-box;
+      background-position: left top; }
   @media only screen and (min-width: 30.063em) {
-    /* line 3, ../components/sass/modules/_rooms.scss */
+    /* line 7, ../components/sass/modules/_rooms.scss */
     #rooms header {
-      max-width: 60em;
+      max-width: 90%;
       margin-left: auto;
       margin-right: auto;
       padding-left: 9.16667%;
@@ -425,7 +524,177 @@ header {
       #rooms header:after {
         content: " ";
         display: block;
-        clear: both; } }
+        clear: both; }
+      /* line 71, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+      head:hover ~ #rooms header, head:hover ~ body #rooms header {
+        position: relative; }
+        /* line 74, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+        head:hover ~ #rooms header:before, head:hover ~ body #rooms header:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          content: " ";
+          z-index: 998;
+          background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2NjZmZiIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYjNiM2ZmIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+          background-size: 100%;
+          background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(102, 102, 255, 0.25)), color-stop(100%, rgba(179, 179, 255, 0.25)));
+          background-image: -moz-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+          background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+          background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+          background-size: 8.33333%;
+          background-origin: content-box;
+          background-clip: content-box;
+          background-position: left top; }
+      /* line 71, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+      head:hover ~ #rooms header, head:hover ~ body #rooms header {
+        position: relative; }
+        /* line 74, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+        head:hover ~ #rooms header:before, head:hover ~ body #rooms header:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          content: " ";
+          z-index: 998;
+          background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2NjZmZiIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYjNiM2ZmIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+          background-size: 100%;
+          background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(102, 102, 255, 0.25)), color-stop(100%, rgba(179, 179, 255, 0.25)));
+          background-image: -moz-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+          background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+          background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+          background-size: 8.33333%;
+          background-origin: content-box;
+          background-clip: content-box;
+          background-position: left top; } }
+/* line 20, ../components/sass/modules/_rooms.scss */
+#rooms .room {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 9.16667%;
+  padding-right: 9.16667%;
+  padding: 12.5em 0; }
+  /* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+  #rooms .room:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  /* line 71, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+  head:hover ~ #rooms .room, head:hover ~ body #rooms .room {
+    position: relative; }
+    /* line 74, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+    head:hover ~ #rooms .room:before, head:hover ~ body #rooms .room:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      content: " ";
+      z-index: 998;
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2NjZmZiIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYjNiM2ZmIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+      background-size: 100%;
+      background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(102, 102, 255, 0.25)), color-stop(100%, rgba(179, 179, 255, 0.25)));
+      background-image: -moz-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+      background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+      background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+      background-size: 8.33333%;
+      background-origin: content-box;
+      background-clip: content-box;
+      background-position: left top; }
+  /* line 71, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+  head:hover ~ #rooms .room, head:hover ~ body #rooms .room {
+    position: relative; }
+    /* line 74, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+    head:hover ~ #rooms .room:before, head:hover ~ body #rooms .room:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      content: " ";
+      z-index: 998;
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2NjZmZiIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYjNiM2ZmIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+      background-size: 100%;
+      background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(102, 102, 255, 0.25)), color-stop(100%, rgba(179, 179, 255, 0.25)));
+      background-image: -moz-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+      background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+      background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+      background-size: 8.33333%;
+      background-origin: content-box;
+      background-clip: content-box;
+      background-position: left top; }
+  @media only screen and (min-width: 48.063em) {
+    /* line 20, ../components/sass/modules/_rooms.scss */
+    #rooms .room {
+      padding-left: 59.16667%;
+      padding-right: 9.16667%; } }
+/* line 31, ../components/sass/modules/_rooms.scss */
+#rooms .content {
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1.25em; }
+  /* line 36, ../components/sass/modules/_rooms.scss */
+  #rooms .content h1 {
+    color: #DF4848; }
+/* line 41, ../components/sass/modules/_rooms.scss */
+#rooms #piccadilly {
+  background-image: url('../../images/hotel/rooms_piccadilly.jpg?1413763094');
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+/* line 48, ../components/sass/modules/_rooms.scss */
+#rooms #cambridge {
+  background-image: url('../../images/hotel/rooms_cambridge.jpg?1413763094');
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+/* line 55, ../components/sass/modules/_rooms.scss */
+#rooms #westminster {
+  background-image: url('../../images/hotel/rooms_westminster.jpg?1413763094');
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+/* line 62, ../components/sass/modules/_rooms.scss */
+#rooms #oxford {
+  background-image: url('../../images/hotel/rooms_oxford.jpg?1413763094');
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+/* line 69, ../components/sass/modules/_rooms.scss */
+#rooms #victoria {
+  background-image: url('../../images/hotel/rooms_victoria.jpg?1413763094');
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+/* line 76, ../components/sass/modules/_rooms.scss */
+#rooms #manchester {
+  background-image: url('../../images/hotel/rooms_manchester.jpg?1413763094');
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
 
 /* line 1, ../components/sass/modules/_welcome.scss */
 #welcome {
@@ -451,6 +720,28 @@ header {
       content: " ";
       display: block;
       clear: both; }
+    /* line 71, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+    head:hover ~ #welcome article, head:hover ~ body #welcome article {
+      position: relative; }
+      /* line 74, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+      head:hover ~ #welcome article:before, head:hover ~ body #welcome article:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        content: " ";
+        z-index: 998;
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2NjZmZiIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYjNiM2ZmIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+        background-size: 100%;
+        background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(102, 102, 255, 0.25)), color-stop(100%, rgba(179, 179, 255, 0.25)));
+        background-image: -moz-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+        background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+        background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+        background-size: 8.33333%;
+        background-origin: content-box;
+        background-clip: content-box;
+        background-position: left top; }
   /* line 17, ../components/sass/modules/_welcome.scss */
   #welcome h1 {
     font-weight: 400;

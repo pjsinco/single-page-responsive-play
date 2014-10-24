@@ -1,17 +1,83 @@
 #rooms {
+  
+  h1 {
+    font-size: 1.5em;
+  } // h1
 
   header {
     margin-bottom: 1.5em;
     @include container(90%);
+    @include pad(1, 1);
+    @include show-grid(overlay);
+
     @media #{$medium-up} {
-      @include container;
+      @include container(90%);
+      @include show-grid(overlay);
       @include pad(1, 1);
+    } // medium-up
+  } // header
 
-
+  .room {
+    @include container(90%);
+    @include pad(1, 1);
+    @include show-grid(overlay);
+    padding: 12.5em 0;
+    
+    @media #{$large-up} {
+      @include pad(7, 1);
     }
+  } //.room
 
+  .content {
+    @include border-radius(.5em);
+    @include background(rgba($light, .8));
+    padding: 1.25em;
+    
+    h1 {
+      color: $red;
+    } // h1
+  } // content
 
-  }
+  #piccadilly {
+    @include background-image(image-url('hotel/rooms_piccadilly.jpg'));
+    @include background-size(cover);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  } // #piccadilly
 
+  #cambridge {
+    @include background-image(image-url('hotel/rooms_cambridge.jpg'));
+    @include background-size(cover);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  } // #cambridge
+
+  #westminster {
+    @include background-image(image-url('hotel/rooms_westminster.jpg'));
+    @include background-size(cover);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  } // #westminster
+
+  #oxford {
+    @include background-image(image-url('hotel/rooms_oxford.jpg'));
+    @include background-size(cover);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  } // #oxford
+
+  #victoria {
+    @include background-image(image-url('hotel/rooms_victoria.jpg'));
+    @include background-size(cover);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  } // #victoria
+
+  #manchester {
+    @include background-image(image-url('hotel/rooms_manchester.jpg'));
+    @include background-size(cover);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  } // #manchester
 
 } // #rooms

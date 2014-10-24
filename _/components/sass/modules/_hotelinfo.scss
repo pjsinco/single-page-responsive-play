@@ -4,7 +4,7 @@
     linear-gradient(top, darken($purple, 20), $green)
   );
 
-  padding-top: 3%;
+  padding: 2em;
 
   color: $light;
 
@@ -15,7 +15,7 @@
   h1 {
     font-size: 3em;
     font-weight: $thin;
-    margin-bottom: .5em;
+    line-height: 1.2em;
   } // h1
 
   h2 {

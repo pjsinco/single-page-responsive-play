@@ -39,7 +39,13 @@ $susy: (
   columns: 12,
   container: 60em,
   gutters: 1/4,
-  gutter-position: inside
+  gutter-position: inside,
+  debug: (
+    image: show-columns,
+    color: rgba(#66f,.25),
+    output: overlay,
+    toggle: top right,
+  )
 );
 
 // breakpoint media query settings
@@ -101,16 +107,8 @@ $xxlarge-only:
 
 // Example usage
 // @media #{$small-up} { }
-// @media #{$small-only} { }
- 
-// @media #{$medium-up} { }
 // @media #{$medium-only} { }
- 
 // @media #{$large-up} { }
-// @media #{$large-only} { }
- 
 // @media #{$xlarge-up} { }
 // @media #{$xlarge-only} { }
- 
 // @media #{$xxlarge-up} { }
-// @media #{$xxlarge-only} { }

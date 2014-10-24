@@ -11,19 +11,19 @@ body {
 }
 
 article {
-  @include container(95%);
+  /*@include container();*/
 
 }
 
-@media #{$medium-only} {
+/*@media #{$medium-up} {*/
   article {
-    @include container;
+    @include container();
   }
 
-} // medium-only
+/*} // medium-only*/
 
 @media #{$large-up} {
 
-  padding: 10% 0;
+  /*padding: 10% 0;*/
   
 } // large-up
